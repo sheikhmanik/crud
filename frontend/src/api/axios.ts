@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5003",
+  baseURL: "https://crud-backend-g0x0.onrender.com",
 });
 
 // Axios response interceptor to handle expired tokens
