@@ -1,0 +1,36 @@
+### Todo REST API
+POST http://localhost:5003/auth/register
+Content-Type: application/json
+
+{
+  "username": "test@gmail.com",
+  "password": "newpassword"
+}
+
+### GET ALL TODOS
+GET http://localhost:5003/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzUzOTU0ODk4LCJleHAiOjE3NTQwNDEyOTh9.Y1zuVEIuE3q8ZfQ_YykvyVq5DWUlGzWe47YOw6vzibI
+
+
+### CREATE TODO
+POST http://localhost:5003/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzUzOTU0ODk4LCJleHAiOjE3NTQwNDEyOTh9.Y1zuVEIuE3q8ZfQ_YykvyVq5DWUlGzWe47YOw6vzibI
+Content-Type: application/json
+
+{
+  "task": "Buy groceries"
+}
+
+### DELETE TODO BY ID
+DELETE http://localhost:5003/todos/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzUzOTU0ODk4LCJleHAiOjE3NTQwNDEyOTh9.Y1zuVEIuE3q8ZfQ_YykvyVq5DWUlGzWe47YOw6vzibI
+
+### UPDATE TODO BY ID
+PUT http://localhost:5003/todos/21
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzUzOTU0ODk4LCJleHAiOjE3NTQwNDEyOTh9.Y1zuVEIuE3q8ZfQ_YykvyVq5DWUlGzWe47YOw6vzibI
+Content-Type: application/json
+
+{
+  "task": "Buy groceries",
+  "completed": false
+}
