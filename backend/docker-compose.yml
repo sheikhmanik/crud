@@ -7,25 +7,7 @@ services:
       - "5003:5003"
     env_file:
       - .env
-    environment:
-      - DATABASE_URL=https://crud-backend-g0x0.onrender.com
     volumes:
       - .:/app
       - /app/node_modules
     command: ["npx", "nodemon", "--watch", ".", "src/server.ts"]
-    depends_on:
-      - db
-
-  db:
-    image: postgres
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
-volumes:
-  pgdata:
